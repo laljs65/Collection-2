@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Our Little Collection</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="stars"></div>
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark">OLC</span>
+      <div>
+        <strong>Our Little Collection</strong>
+        <small>Eine Karte. Jeden Tag.</small>
+      </div>
+    </div>
+    <button class="nav-btn" id="albumBtn">Sammlung <span id="headerCount">0 / 20</span></button>
+  </header>
+
+  <main>
+    <section class="hero" id="homeView">
+      <div class="eyebrow">DAILY COLLECTION</div>
+      <h1>Für Emil.</h1>
+      <p class="intro">Jeden Tag wartet eine neue Karte auf dich. Öffne dein heutiges Pack und füge sie deiner Sammlung hinzu.</p>
+
+      <div class="pack-area">
+        <div class="pack-glow"></div>
+        <button class="booster" id="openPack" aria-label="Heutiges Booster-Pack öffnen">
+          <div class="pack-shine"></div>
+          <div class="pack-rip"></div>
+          <div class="pack-title">OUR LITTLE<br>COLLECTION</div>
+          <div class="pack-sub">DAILY PACK</div>
+          <div class="pack-number" id="packNumber">#001</div>
+          <div class="pack-seal">IM</div>
+          <div class="pack-bottom">ONE CARD INSIDE</div>
+        </button>
+      </div>
+
+      <div class="today" id="todayText">Heute wartet Karte #001 auf dich.</div>
+      <div class="locked-message hidden" id="lockedMessage"></div>
+      <div class="hint">Die nächste Karte erscheint morgen.</div>
+
+      <button class="album-link" id="albumBtn2">Meine Sammlung ansehen</button>
+    </section>
+
+    <section class="album hidden" id="albumView">
+      <div class="album-head">
+        <div>
+          <div class="eyebrow">COLLECTION ALBUM</div>
+          <h2>Unsere Sammlung</h2>
+          <p><span id="albumCount">0</span> / 20 Karten gesammelt</p>
+        </div>
+        <button class="back-btn" id="backBtn">Zurück</button>
+      </div>
+      <div class="progress"><div id="progressFill"></div></div>
+      <div class="album-grid" id="albumGrid"></div>
+    </section>
+  </main>
+
+  <div class="modal hidden" id="cardModal" aria-hidden="true">
+    <div class="modal-backdrop"></div>
+    <div class="modal-content">
+      <button class="close-modal" id="closeModal" aria-label="Schließen">×</button>
+      <div class="opening-stage" id="openingStage">
+        <div class="tear-pack" id="tearPack">
+          <div class="tear-pack-title">OUR LITTLE<br>COLLECTION</div>
+          <div class="tear-line"></div>
+          <div class="tear-label">OPEN ME</div>
+        </div>
+        <div class="card-reveal" id="cardReveal">
+          <div class="card-scene" id="cardScene"></div>
+        </div>
+      </div>
+      <div class="reveal-actions hidden" id="revealActions">
+        <button class="primary-btn" id="addToAlbum">Zur Sammlung hinzufügen</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal hidden" id="detailModal" aria-hidden="true">
+    <div class="modal-backdrop"></div>
+    <div class="detail-content">
+      <button class="close-modal" id="closeDetail" aria-label="Schließen">×</button>
+      <div class="detail-card-wrap" id="detailCardWrap"></div>
+      <p class="flip-hint">Klicke auf die Karte, um sie zu wenden.</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
